@@ -1,0 +1,1047 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="j_idt2"><link type="text/css" rel="stylesheet" href="/javax.faces.resource/theme.css.jspx?ln=primefaces-start" /><link type="text/css" rel="stylesheet" href="/javax.faces.resource/fa/font-awesome.css.jspx?ln=primefaces&amp;v=6.1" /><link type="text/css" rel="stylesheet" href="/javax.faces.resource/components.css.jspx?ln=primefaces&amp;v=6.1" /><script type="text/javascript" src="/javax.faces.resource/jquery/jquery.js.jspx?ln=primefaces&amp;v=6.1"></script><script type="text/javascript" src="/javax.faces.resource/jquery/jquery-plugins.js.jspx?ln=primefaces&amp;v=6.1"></script><script type="text/javascript" src="/javax.faces.resource/core.js.jspx?ln=primefaces&amp;v=6.1"></script><script type="text/javascript" src="/javax.faces.resource/components.js.jspx?ln=primefaces&amp;v=6.1"></script><link type="text/css" rel="stylesheet" href="/javax.faces.resource/watermark/watermark.css.jspx?ln=primefaces&amp;v=6.1" /><script type="text/javascript" src="/javax.faces.resource/watermark/watermark.js.jspx?ln=primefaces&amp;v=6.1"></script><script type="text/javascript" src="/javax.faces.resource/printer/printer.js.jspx?ln=primefaces&amp;v=6.1"></script><link type="text/css" rel="stylesheet" href="/javax.faces.resource/charts/charts.css.jspx?ln=primefaces&amp;v=6.1" /><script type="text/javascript" src="/javax.faces.resource/charts/charts.js.jspx?ln=primefaces&amp;v=6.1"></script><script type="text/javascript">if(window.PrimeFaces){PrimeFaces.settings.locale='zh';}</script><!--[if lte IE 7]>
+        <script>
+            window.location.href = '/update_browser.jsp';
+        </script><![endif]-->
+        <title>成绩查询 - 成绩详情
+            - 南京理工大学思想政治理论课在线考试系统</title>
+        <meta http-equiv="keywords" content=" 南京理工大学思想政治理论课在线考试系统" />
+        <meta http-equiv="description" content=" 南京理工大学思想政治理论课在线考试系统" />
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/rerebbs.css" />
+        <link rel="stylesheet" type="text/css" href="/resources/css/rerebbs_a.css" />
+        <link rel="stylesheet" type="text/css" href="/resources/jquery.Sonline.2.0/style/green.css" /></head><body style="background-color: #;">
+<form id="myForm" name="myForm" method="post" action="/talk/ExamCaseReportGeneral.jspx" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="myForm" value="myForm" />
+<div id="myForm:login1" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container" style="z-index: 1000;"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="myForm:login1_title" class="ui-dialog-title">登录</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content"><div id="myForm:j_idt12" class="ui-outputpanel ui-widget">
+                    <script>
+                        function testLogin() {
+                            //alert('ok');
+                            if (true ==false)
+                            {
+                                PF('login1').hide();
+
+                            }
+                            PF('loginButton').enable();
+
+                        }
+                    </script></div><table style="width:98%;margin: 5px 0px 15px 0px;height:130px;">
+<tbody>
+<tr>
+<td class="w21"><span class="myTip">标识类型：</span><select name="myForm:j_idt17" size="1">	<option value="urn" selected="selected">用户名</option>
+</select></td>
+</tr>
+<tr>
+<td class="w21"><script id="myForm:j_idt19_s" type="text/javascript">$(function(){PrimeFaces.cw("Watermark","widget_myForm_j_idt19",{id:"myForm:j_idt19",value:"考生标识",target:"myForm:urn"});});</script><input id="myForm:urn" name="myForm:urn" type="text" value="" autocomplete="off" onfocus="this.select()" style="" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all inputTextQ" /><script id="myForm:urn_s" type="text/javascript">PrimeFaces.cw("InputText","widget_myForm_urn",{id:"myForm:urn"});</script></td>
+</tr>
+<tr>
+<td class="w21"><script id="myForm:j_idt20_s" type="text/javascript">$(function(){PrimeFaces.cw("Watermark","widget_myForm_j_idt20",{id:"myForm:j_idt20",value:"密码",target:"myForm:pwd"});});</script><input id="myForm:pwd" name="myForm:pwd" type="password" class="ui-inputfield ui-password ui-widget ui-state-default ui-corner-all inputTextQ" autocomplete="off" onfocus="this.select()" /><script id="myForm:pwd_s" type="text/javascript">$(function(){PrimeFaces.cw("Password","widget_myForm_pwd",{id:"myForm:pwd"});});</script></td>
+</tr>
+<tr>
+<td class="w21"><table cellpadding="0" cellspacing="0" style="width:100%;margin-top: 10px;">
+<tbody>
+<tr>
+<td><button id="myForm:j_idt22" name="myForm:j_idt22" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="PrimeFaces.bcn(this,event,[function(event){PF('loginButton').disable();},function(event){PrimeFaces.ab({s:&quot;myForm:j_idt22&quot;,p:&quot;myForm&quot;,u:&quot;myForm:mainPanel&quot;,onco:function(xhr,status,args){javascript:testLogin();;}});return false;}]);" style="width:80px;" type="submit"><span class="ui-button-text ui-c">登录</span></button><script id="myForm:j_idt22_s" type="text/javascript">PrimeFaces.cw("CommandButton","loginButton",{id:"myForm:j_idt22"});</script></td>
+<td><input type="checkbox" name="myForm:j_idt24" />七天内自动登录</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<hr id="myForm:j_idt26" class="ui-separator ui-state-default ui-corner-all" /><table style="width:100%;">
+<tbody>
+<tr>
+<td>   
+                    </td>
+<td><a href="/talk/GetPWD.xhtml">忘记密码？</a></td>
+</tr>
+</tbody>
+</table>
+<div id="myForm:j_idt35" class="ui-outputpanel ui-widget"></div></div></div><script id="myForm:login1_s" type="text/javascript">$(function(){PrimeFaces.cw("Dialog","login1",{id:"myForm:login1",resizable:false,width:"400",showEffect:"drop",hideEffect:"drop"});});</script><div id="myForm:mainFrontMenuWrapper" class="ui-panel ui-widget ui-widget-content ui-corner-all" style="border:0px solid red;border-bottom: 1px solid #bcc7cf;border-radius: 0px;" data-widget="widget_myForm_mainFrontMenuWrapper"><div id="myForm:mainFrontMenuWrapper_content" class="ui-panel-content ui-widget-content">  
+                <div style="width:970px;margin: 0px auto!important;border-radius: 3px;height: 75px;border:0px solid red;">
+                    <div style="width:280px;border:0px solid green;height:75px;float: left;overflow: hidden;"><a href="#" target="_blank"><img id="myForm:adv2" src="/resources/images/logo2014.gif" style="width:100%;margin: 0px 0px 0px 0px;border:0px 0px 0px 0px;" /></a>
+                    </div>
+
+                    <div style="border:0px solid red;width:680px;float:right;">
+                        <div><div id="myForm:j_idt40" class="ui-outputpanel ui-widget"><table style="text-align: center;width: 100%;border:0px solid green;">
+<tbody>
+<tr>
+<td><span class="topTip">欢迎光临本系统！</span></td>
+<td><div id="myForm:front_menu" class="ui-menu ui-menubar ui-widget ui-widget-content ui-corner-all ui-helper-clearfix front_menu" style="background:transparent!important;" role="menubar"><div tabindex="0" class="ui-helper-hidden-accessible"></div><ul class="ui-menu-list ui-helper-reset"><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" id="myForm:mobile" class="ui-menuitem-link ui-corner-all topNav newMenuNav" href="/mobile/Default.jspx"><span class="ui-menuitem-text"><img id="myForm:j_idt45" src="/resources/images/svgs/icons/multiple_smartphones.svg?pfdrid_c=true" alt="" class="menuSvg" />
+                                            <br /> 手机版</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all topNav" style="" href="#" onclick="PF('login1').show();;PrimeFaces.ab({s:&quot;myForm:j_idt56&quot;,g:false,f:&quot;myForm&quot;});return false;"><span class="ui-menuitem-text"><img id="myForm:j_idt57" src="/resources/images/svgs/icons/feed_in.svg?pfdrid_c=true" alt="" class="menuSvg" />
+                                                <br /> 登录</span></a></li><li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a tabindex="-1" class="ui-menuitem-link ui-corner-all topNav" href="/talk/Default.jspx"><span class="ui-menuitem-text"><img id="myForm:j_idt61" src="/resources/images/svgs/icons/engineering.svg?pfdrid_c=true" alt="" class="menuSvg" />
+                                            <br /> 系统首页</span></a></li></ul></div><script id="myForm:front_menu_s" type="text/javascript">PrimeFaces.cw("Menubar","widget_myForm_front_menu",{id:"myForm:front_menu",autoDisplay:true});</script></td>
+</tr>
+</tbody>
+</table>
+<div id="myForm:qrPanel" class="ui-overlaypanel ui-widget ui-widget-content ui-overlay-hidden ui-corner-all ui-shadow" style=""><div class="ui-overlaypanel-content">
+                                    <div style="width:200px!important;border:0px solid red;text-align: center;"><span class="topTip">手机扫一扫！</span><a href="/mobile/Default.jspx" title="点击进入"><img id="myForm:j_idt67" src="/servlet/QRCodeServlet.png?pfdrid_c=true" alt="" style="width:200px;" /></a>
+                                    </div></div></div><script id="myForm:qrPanel_s" type="text/javascript">$(function(){PrimeFaces.cw("OverlayPanel","widget_myForm_qrPanel",{id:"myForm:qrPanel",target:"myForm:mobile",showEvent:"mouseover",showEffect:"blind",hideEffect:"explode"});});</script></div>
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                </div></div></div><script id="myForm:mainFrontMenuWrapper_s" type="text/javascript">PrimeFaces.cw("Panel","widget_myForm_mainFrontMenuWrapper",{id:"myForm:mainFrontMenuWrapper"});</script>
+            <div style="height:20px;background: white; "></div>
+            
+            <div style="width:100%;background: white; ">
+                <div style="margin: 0px auto;width:990px;" class="ui-grid ui-grid-fixed"><div id="myForm:mainPanel" class="ui-panel ui-widget ui-widget-content ui-corner-all mainPanel" style="border:0px solid #e5e5e5;width:100%;background: transparent;" data-widget="widget_myForm_mainPanel"><div id="myForm:mainPanel_content" class="ui-panel-content ui-widget-content">
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+
+                <script type="text/javascript">
+                    document.oncontextmenu = new Function("event.returnValue=false;"); //禁止右键功能,单击右键将无任何反应
+                    document.onselectstart = new Function("event.returnValue=false;"); //禁止选择,也就是无法复制
+                    function aabbcc(url) {
+                        var scrWidth = screen.availWidth;
+                        var scrHeight = screen.availHeight;
+                        var self = window.open(url, '', "fullscreen=3,resizable=false,toolbar=no,menubar=no,scrollbars=yes,location=no,top=0,left=0,width=" + scrWidth + ",height=" + scrHeight);
+                        //self.resizeTo(scrWidth,scrHeight);
+                        self.moveTo(0, 0);
+                    }
+                </script><div id="myForm:questionCommentDig1" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container whiteBackground"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="myForm:questionCommentDig1_title" class="ui-dialog-title">试题评论</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content"><div id="myForm:j_idt97" class="ui-outputpanel ui-widget"><div id="myForm:j_idt98" class="ui-datatable ui-widget frontColumn noBackgroundGrid" style="text-align: center;"><div class="ui-datatable-tablewrapper"><table role="grid"><thead id="myForm:j_idt98_head"><tr role="row"><th id="myForm:j_idt98:j_idt99" class="ui-state-default" role="columnheader" aria-label="评论内容" scope="col"><span class="ui-column-title">评论内容</span></th><th id="myForm:j_idt98:j_idt102" class="ui-state-default" role="columnheader" aria-label="类型" scope="col"><span class="ui-column-title">类型</span></th><th id="myForm:j_idt98:j_idt105" class="ui-state-default" role="columnheader" aria-label="评论人" scope="col"><span class="ui-column-title">评论人</span></th><th id="myForm:j_idt98:j_idt108" class="ui-state-default" role="columnheader" aria-label="时间" scope="col"><span class="ui-column-title">时间</span></th></tr></thead><tbody id="myForm:j_idt98_data" class="ui-datatable-data ui-widget-content"><tr class="ui-widget-content ui-datatable-empty-message"><td colspan="4">无记录</td></tr></tbody></table></div></div><script id="myForm:j_idt98_s" type="text/javascript">$(function(){PrimeFaces.cw("DataTable","widget_myForm_j_idt98",{id:"myForm:j_idt98",paginator:{id:['myForm:j_idt98_paginator_bottom'],rows:8,rowCount:0,page:0,currentPageTemplate:'({currentPage} of {totalPages})',alwaysVisible:false},groupColumnIndexes:[]});});</script></div></div></div><script id="myForm:questionCommentDig1_s" type="text/javascript">$(function(){PrimeFaces.cw("Dialog","questionCommentDig1",{id:"myForm:questionCommentDig1",modal:true,width:"600"});});</script><div id="myForm:questionCommentDig2" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container whiteBackground"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="myForm:questionCommentDig2_title" class="ui-dialog-title">试题评论</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content"><div id="myForm:j_idt111" class="ui-outputpanel ui-widget"><table class="normalFont" style="">
+<tbody>
+<tr>
+<td>评价类型</td>
+<td><table>
+	<tr>
+<td>
+<input type="radio" checked="checked" name="myForm:j_idt114" id="myForm:j_idt114:0" value="comment" /><label for="myForm:j_idt114:0"> 试题评论</label></td>
+<td>
+<input type="radio" name="myForm:j_idt114" id="myForm:j_idt114:1" value="wrong" /><label for="myForm:j_idt114:1"> 试题报错</label></td>
+	</tr>
+</table></td>
+</tr>
+<tr>
+<td>评价内容</td>
+<td><textarea id="myForm:j_idt118" name="myForm:j_idt118" cols="20" rows="10" maxlength="2147483647" style="width:450px;" class="ui-inputfield ui-inputtextarea ui-widget ui-state-default ui-corner-all ui-inputtextarea-resizable"></textarea><script id="myForm:j_idt118_s" type="text/javascript">$(function(){PrimeFaces.cw("InputTextarea","widget_myForm_j_idt118",{id:"myForm:j_idt118",autoResize:true});});</script></td>
+</tr>
+<tr>
+<td>评分</td>
+<td><div id="myForm:j_idt120" class="ui-rating"><div class="ui-rating-cancel"><a></a></div><div class="ui-rating-star ui-rating-star-on"><a></a></div><div class="ui-rating-star ui-rating-star-on"><a></a></div><div class="ui-rating-star ui-rating-star-on"><a></a></div><div class="ui-rating-star ui-rating-star-on"><a></a></div><div class="ui-rating-star ui-rating-star-on"><a></a></div><input type="hidden" id="myForm:j_idt120_input" name="myForm:j_idt120_input" autocomplete="off" value="5" /></div><script id="myForm:j_idt120_s" type="text/javascript">$(function(){PrimeFaces.cw("Rating","widget_myForm_j_idt120",{id:"myForm:j_idt120"});});</script></td>
+</tr>
+</tbody>
+</table>
+<hr id="myForm:j_idt121" class="ui-separator ui-state-default ui-corner-all" /><button id="myForm:j_idt122" name="myForm:j_idt122" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt122&quot;,u:&quot;myForm&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').hide();;}});return false;" type="submit"><span class="ui-button-text ui-c">提交评论</span></button><script id="myForm:j_idt122_s" type="text/javascript">PrimeFaces.cw("CommandButton","widget_myForm_j_idt122",{id:"myForm:j_idt122"});</script></div></div></div><script id="myForm:questionCommentDig2_s" type="text/javascript">$(function(){PrimeFaces.cw("Dialog","questionCommentDig2",{id:"myForm:questionCommentDig2",modal:true,width:"600"});});</script><div id="myForm:statisticDig1" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container whiteBackground"><div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"><span id="myForm:statisticDig1_title" class="ui-dialog-title">作答情况统计</span><a href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"><span class="ui-icon ui-icon-closethick"></span></a></div><div class="ui-dialog-content ui-widget-content"><div id="myForm:j_idt123" class="ui-outputpanel ui-widget"><span class="choiceTitle"></span>
+                    <div style="margin-left: 30px;">
+                        <br />
+                    </div></div></div></div><script id="myForm:statisticDig1_s" type="text/javascript">$(function(){PrimeFaces.cw("Dialog","statisticDig1",{id:"myForm:statisticDig1",modal:true,width:"600"});});</script><div id="myForm:topNav8" class="ui-panel ui-widget ui-widget-content ui-corner-all frontColumn topNav8Wrapper" data-widget="widget_myForm_topNav8"><div id="myForm:topNav8_content" class="ui-panel-content ui-widget-content"><a href="Default.jspx" class="nav8">首页</a><span class="navSeparator">/</span><span class="nav8">成绩查询</span><span class="navSeparator">/</span><a href="ExamCaseReportList.jspx" class="nav8">综合考试</a><span class="navSeparator">/</span><span class="nav8">成绩详情</span></div></div><script id="myForm:topNav8_s" type="text/javascript">PrimeFaces.cw("Panel","widget_myForm_topNav8",{id:"myForm:topNav8"});</script><hr id="myForm:j_idt145" class="ui-separator ui-state-default ui-corner-all" />
+                    
+                <span id="myForm:examDc"></span><div id="myForm:toBePrinted" class="ui-outputpanel ui-widget"><table style="width:100%;">
+<tbody>
+<tr>
+<td><table class="normalFont" style="width:100%;">
+<tbody>
+<tr>
+<td>考试名称：中国近代史纲要模拟考试</td>
+<td>考试时长：45分钟</td>
+</tr>
+<tr>
+<td>开考时间：2018-06-01 08:18:38</td>
+<td>提交时间：2018-06-01 08:24:17</td>
+</tr>
+<tr>
+<td>考试题型：单选题：20，多选题：10，判断题：20</td>
+<td>考试成绩：<span style="color:red;font-weight: bold;font-size: 36px;">0.0</span><span style="color:green;">/100.0</span></td>
+</tr>
+<tr>
+<td>排名：<span style="">无</span><span style="color:green;">/3565</span></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<hr id="myForm:j_idt188" class="ui-separator ui-state-default ui-corner-all" /><table style="width:100%;text-align: center;">
+<tbody>
+<tr>
+<td><div id="myForm:sample" style="width:400px;height:300px"></div><script id="myForm:sample_s" type="text/javascript">$(function(){PrimeFaces.cw('Chart','widget_myForm_sample',{id:'myForm:sample',type:'pie',data:[[["单选题40.0分",40.0],["多选题20.0分",20.0],["判断题40.0分",40.0]]],title:"试卷分值构成比例图",legendPosition:"w",sliceMargin:5,showDataLabels:true,datatip:true,datatipFormat:"%s - %d"},'charts');});</script></td>
+<td><div id="myForm:custom" style="width:400px;height:300px"></div><script id="myForm:custom_s" type="text/javascript">$(function(){PrimeFaces.cw('Chart','widget_myForm_custom',{id:'myForm:custom',type:'pie',data:[[["单选题0.0分",0.0],["多选题0.0分",0.0],["判断题0.0分",0.0]]],title:"考生得分构成比例图",legendPosition:"e",sliceMargin:5,showDataLabels:true,datatip:true,datatipFormat:"%s - %d"},'charts');});</script></td>
+</tr>
+</tbody>
+</table>
+<div id="myForm:j_idt190:0:j_idt191" class="ui-panel ui-widget ui-widget-content ui-corner-all mainPanel frontColumn noBackground" data-widget="widget_myForm_j_idt190_0_j_idt191"><div id="myForm:j_idt190:0:j_idt191_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">※单选题，共20小题，共40.0分，实得0.0分。</span></div><div id="myForm:j_idt190:0:j_idt191_content" class="ui-panel-content ui-widget-content"><span class="choiceTitle">1、毛泽东在《反对本本主义》一文中提出了著名的:（）</span><span class="choiceTitle">（2.0分）</span>
+                                    <div style="margin-left: 30px;"><span class="choiceTitle">A. “须知政权是由枪杆子中取得的”　　　　</span>
+                                            <br /><span class="choiceTitle">B. “工农武装割据”的思想</span>
+                                            <br /><span class="choiceTitle">C. “没有调查，没有发言权”的思想　　　</span>
+                                            <br /><span class="choiceTitle">D. “两个务必”的思想</span>
+                                            <br />
+                                    </div>
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">C</span> 
+                                        <span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;">未填写</span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:0:j_idt195:0:j_idt218" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:0:j_idt218&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:0:j_idt220" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:0:j_idt220&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:0:j_idt222" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:0:j_idt222&quot;,onco:function(xhr,status,args){PF('statisticDig1').show();;}});return false;">作答统计</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">2、毛泽东第一次提出马克思主义中国化的命题是在：（）</span><span class="choiceTitle">（2.0分）</span>
+                                    <div style="margin-left: 30px;"><span class="choiceTitle">A. 《中国革命和中国共产党》</span>
+                                            <br /><span class="choiceTitle">B. 《论新阶段》</span>
+                                            <br /><span class="choiceTitle">C. 《反对本本主义》</span>
+                                            <br /><span class="choiceTitle">D. 《新民主主义论》</span>
+                                            <br />
+                                    </div>
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">B</span> 
+                                        <span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;">未填写</span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:0:j_idt195:1:j_idt218" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:1:j_idt218&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:1:j_idt220" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:1:j_idt220&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:1:j_idt222" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:1:j_idt222&quot;,onco:function(xhr,status,args){PF('statisticDig1').show();;}});return false;">作答统计</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">3、太平天国农民战争爆发的标志是：（）</span><span class="choiceTitle">（2.0分）</span>
+                                    <div style="margin-left: 30px;"><span class="choiceTitle">A. 金田起义</span>
+                                            <br /><span class="choiceTitle">B. 永安建制</span>
+                                            <br /><span class="choiceTitle">C. 长沙战役</span>
+                                            <br /><span class="choiceTitle">D. 南京定都</span>
+                                            <br />
+                                    </div>
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">A</span> 
+                                        <span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;">未填写</span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:0:j_idt195:2:j_idt218" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:2:j_idt218&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:2:j_idt220" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:2:j_idt220&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:2:j_idt222" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:2:j_idt222&quot;,onco:function(xhr,status,args){PF('statisticDig1').show();;}});return false;">作答统计</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">4、1928年12月，毛泽东在（）主持制定了中国共产党历史上第一个土地法，以立法的形式，首次肯定了广大农民以革命的手段获得土地的权利。</span><span class="choiceTitle">（2.0分）</span>
+                                    <div style="margin-left: 30px;"><span class="choiceTitle">A. 井冈山</span>
+                                            <br /><span class="choiceTitle">B. 兴国</span>
+                                            <br /><span class="choiceTitle">C. 闽西</span>
+                                            <br /><span class="choiceTitle">D. 宁冈</span>
+                                            <br />
+                                    </div>
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">A</span> 
+                                        <span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;">未填写</span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:0:j_idt195:3:j_idt218" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:3:j_idt218&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:3:j_idt220" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:3:j_idt220&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:3:j_idt222" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:3:j_idt222&quot;,onco:function(xhr,status,args){PF('statisticDig1').show();;}});return false;">作答统计</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">5、中国最早接受和宣传马克思主义的先进分子是：（）</span><span class="choiceTitle">（2.0分）</span>
+                                    <div style="margin-left: 30px;"><span class="choiceTitle">A. 陈独秀</span>
+                                            <br /><span class="choiceTitle">B. 毛泽东</span>
+                                            <br /><span class="choiceTitle">C. 李达</span>
+                                            <br /><span class="choiceTitle">D. 李大钊</span>
+                                            <br />
+                                    </div>
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">D</span> 
+                                        <span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;">未填写</span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:0:j_idt195:4:j_idt218" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:4:j_idt218&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:4:j_idt220" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:4:j_idt220&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:4:j_idt222" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:4:j_idt222&quot;,onco:function(xhr,status,args){PF('statisticDig1').show();;}});return false;">作答统计</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">6、抗战胜利后，中国人民的根本利益之所在是：（）</span><span class="choiceTitle">（2.0分）</span>
+                                    <div style="margin-left: 30px;"><span class="choiceTitle">A. 维护国民党的统治地位</span>
+                                            <br /><span class="choiceTitle">B. 与国民党进行内战</span>
+                                            <br /><span class="choiceTitle">C. 维持国家现状</span>
+                                            <br /><span class="choiceTitle">D. 为建设新中国而奋斗</span>
+                                            <br />
+                                    </div>
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">D</span> 
+                                        <span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;">未填写</span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:0:j_idt195:5:j_idt218" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:5:j_idt218&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:5:j_idt220" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:5:j_idt220&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:5:j_idt222" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:5:j_idt222&quot;,onco:function(xhr,status,args){PF('statisticDig1').show();;}});return false;">作答统计</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">7、19世纪60年代到90年代，洋务派兴办洋务事业的指导思想是：（）</span><span class="choiceTitle">（2.0分）</span>
+                                    <div style="margin-left: 30px;"><span class="choiceTitle">A. 师夷长技以制夷</span>
+                                            <br /><span class="choiceTitle">B. 中学为体，西学为用</span>
+                                            <br /><span class="choiceTitle">C. 物竞天择，适者生存</span>
+                                            <br /><span class="choiceTitle">D. 变法维新，救亡图存</span>
+                                            <br />
+                                    </div>
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">B</span> 
+                                        <span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;">未填写</span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:0:j_idt195:6:j_idt218" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:6:j_idt218&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:6:j_idt220" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:6:j_idt220&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:6:j_idt222" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:6:j_idt222&quot;,onco:function(xhr,status,args){PF('statisticDig1').show();;}});return false;">作答统计</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">8、1947年12月，中共中央制订夺取全国胜利行动纲领会议的地点是：（）</span><span class="choiceTitle">（2.0分）</span>
+                                    <div style="margin-left: 30px;"><span class="choiceTitle">A. 瓦窑堡</span>
+                                            <br /><span class="choiceTitle">B. 井冈山</span>
+                                            <br /><span class="choiceTitle">C. 遵义</span>
+                                            <br /><span class="choiceTitle">D. 杨家沟</span>
+                                            <br />
+                                    </div>
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">D</span> 
+                                        <span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;">未填写</span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:0:j_idt195:7:j_idt218" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:7:j_idt218&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:7:j_idt220" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:7:j_idt220&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:7:j_idt222" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:7:j_idt222&quot;,onco:function(xhr,status,args){PF('statisticDig1').show();;}});return false;">作答统计</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">9、中国共产党二大的中心任务是：（）</span><span class="choiceTitle">（2.0分）</span>
+                                    <div style="margin-left: 30px;"><span class="choiceTitle">A. 确定党的最高奋斗目标</span>
+                                            <br /><span class="choiceTitle">B. 建立党的各级组织</span>
+                                            <br /><span class="choiceTitle">C. 制定革命统一战线政策</span>
+                                            <br /><span class="choiceTitle">D. 制定党的民主革命纲领</span>
+                                            <br />
+                                    </div>
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">D</span> 
+                                        <span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;">未填写</span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:0:j_idt195:8:j_idt218" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:8:j_idt218&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:8:j_idt220" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:8:j_idt220&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:8:j_idt222" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:8:j_idt222&quot;,onco:function(xhr,status,args){PF('statisticDig1').show();;}});return false;">作答统计</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">10、建国以后人民政府没收国民政府财产和官僚资本，这一措施：（）</span><span class="choiceTitle">（2.0分）</span>
+                                    <div style="margin-left: 30px;"><span class="choiceTitle">A. 属于新民主主义革命性质</span>
+                                            <br /><span class="choiceTitle">B. 属于社会主义革命性质</span>
+                                            <br /><span class="choiceTitle">C. 兼有旧民主主义革命和新民主主义革命的性质</span>
+                                            <br /><span class="choiceTitle">D. 兼有新民主主义革命和社会主义革命的性质</span>
+                                            <br />
+                                    </div>
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">D</span> 
+                                        <span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;">未填写</span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:0:j_idt195:9:j_idt218" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:9:j_idt218&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:9:j_idt220" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:9:j_idt220&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:9:j_idt222" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:9:j_idt222&quot;,onco:function(xhr,status,args){PF('statisticDig1').show();;}});return false;">作答统计</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">11、鸦片战争后，首先被外国侵略者直接控制的是：（）</span><span class="choiceTitle">（2.0分）</span>
+                                    <div style="margin-left: 30px;"><span class="choiceTitle">A. 中国外交　</span>
+                                            <br /><span class="choiceTitle">B. 中国内政　　</span>
+                                            <br /><span class="choiceTitle">C. 中国海关　　　</span>
+                                            <br /><span class="choiceTitle">D. 中国军事</span>
+                                            <br />
+                                    </div>
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">C</span> 
+                                        <span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;">未填写</span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:0:j_idt195:10:j_idt218" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:10:j_idt218&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:10:j_idt220" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:10:j_idt220&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:10:j_idt222" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:10:j_idt222&quot;,onco:function(xhr,status,args){PF('statisticDig1').show();;}});return false;">作答统计</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">12、下列不属于毛泽东、朱德三次反“围剿”战略战术原则的是：（）</span><span class="choiceTitle">（2.0分）</span>
+                                    <div style="margin-left: 30px;"><span class="choiceTitle">A. 诱敌深入</span>
+                                            <br /><span class="choiceTitle">B. 避敌主力</span>
+                                            <br /><span class="choiceTitle">C. 打其虚弱</span>
+                                            <br /><span class="choiceTitle">D. 以堡垒对堡垒</span>
+                                            <br />
+                                    </div>
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">D</span> 
+                                        <span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;">未填写</span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:0:j_idt195:11:j_idt218" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:11:j_idt218&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:11:j_idt220" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:11:j_idt220&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:11:j_idt222" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:11:j_idt222&quot;,onco:function(xhr,status,args){PF('statisticDig1').show();;}});return false;">作答统计</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">13、率领北平国民党军队接受和平改编的国民党将领是：（）</span><span class="choiceTitle">（2.0分）</span>
+                                    <div style="margin-left: 30px;"><span class="choiceTitle">A. 张治中</span>
+                                            <br /><span class="choiceTitle">B. 蔡廷锴</span>
+                                            <br /><span class="choiceTitle">C. 杜聿明</span>
+                                            <br /><span class="choiceTitle">D. 傅作义</span>
+                                            <br />
+                                    </div>
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">D</span> 
+                                        <span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;">未填写</span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:0:j_idt195:12:j_idt218" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:12:j_idt218&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:12:j_idt220" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:12:j_idt220&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:12:j_idt222" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:12:j_idt222&quot;,onco:function(xhr,status,args){PF('statisticDig1').show();;}});return false;">作答统计</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">14、1928年蒋介石在南京建立政权，其性质是：（）</span><span class="choiceTitle">（2.0分）</span>
+                                    <div style="margin-left: 30px;"><span class="choiceTitle">A. 地主阶级政权</span>
+                                            <br /><span class="choiceTitle">B. 官僚资产阶级政权</span>
+                                            <br /><span class="choiceTitle">C. 资产阶级政权</span>
+                                            <br /><span class="choiceTitle">D. 大地主大资产阶级政权</span>
+                                            <br />
+                                    </div>
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">D</span> 
+                                        <span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;">未填写</span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:0:j_idt195:13:j_idt218" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:13:j_idt218&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:13:j_idt220" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:13:j_idt220&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:13:j_idt222" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:13:j_idt222&quot;,onco:function(xhr,status,args){PF('statisticDig1').show();;}});return false;">作答统计</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">15、中共八大提出党和全国人民当前的主要任务是：（）</span><span class="choiceTitle">（2.0分）</span>
+                                    <div style="margin-left: 30px;"><span class="choiceTitle">A. 把我国从落后的农业国变为先进的工业国</span>
+                                            <br /><span class="choiceTitle">B. 正确处理人民内部矛盾</span>
+                                            <br /><span class="choiceTitle">C. 把我国建设成为富强、民主、文明的国家</span>
+                                            <br /><span class="choiceTitle">D. 坚持四项基本原则，坚持改革开放</span>
+                                            <br />
+                                    </div>
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">A</span> 
+                                        <span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;">未填写</span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:0:j_idt195:14:j_idt218" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:14:j_idt218&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（1）</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:14:j_idt220" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:14:j_idt220&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:14:j_idt222" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:14:j_idt222&quot;,onco:function(xhr,status,args){PF('statisticDig1').show();;}});return false;">作答统计</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">16、1839年组织编写成《四洲志》，向中国人介绍西方情况的是：（）</span><span class="choiceTitle">（2.0分）</span>
+                                    <div style="margin-left: 30px;"><span class="choiceTitle">A. 林则徐</span>
+                                            <br /><span class="choiceTitle">B. 魏源</span>
+                                            <br /><span class="choiceTitle">C. 马建忠</span>
+                                            <br /><span class="choiceTitle">D. 郑观应</span>
+                                            <br />
+                                    </div>
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">A</span> 
+                                        <span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;">未填写</span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:0:j_idt195:15:j_idt218" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:15:j_idt218&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:15:j_idt220" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:15:j_idt220&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:15:j_idt222" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:15:j_idt222&quot;,onco:function(xhr,status,args){PF('statisticDig1').show();;}});return false;">作答统计</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">17、先进的中国人最早提出在中国发展资本主义的方案是：（）</span><span class="choiceTitle">（2.0分）</span>
+                                    <div style="margin-left: 30px;"><span class="choiceTitle">A. 《海国图志》</span>
+                                            <br /><span class="choiceTitle">B. 《资政新篇》</span>
+                                            <br /><span class="choiceTitle">C. 《应诏统筹全局折》</span>
+                                            <br /><span class="choiceTitle">D. 《革命军》</span>
+                                            <br />
+                                    </div>
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">B</span> 
+                                        <span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;">未填写</span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:0:j_idt195:16:j_idt218" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:16:j_idt218&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:16:j_idt220" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:16:j_idt220&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:16:j_idt222" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:16:j_idt222&quot;,onco:function(xhr,status,args){PF('statisticDig1').show();;}});return false;">作答统计</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">18、太平天国之所以是中国农民战争的最高峰，最主要是因为：（）</span><span class="choiceTitle">（2.0分）</span>
+                                    <div style="margin-left: 30px;"><span class="choiceTitle">A. 其规模和延续时间均属空前</span>
+                                            <br /><span class="choiceTitle">B. 建立了与清政府对立的政权</span>
+                                            <br /><span class="choiceTitle">C. 制定了比较完整的革命纲领</span>
+                                            <br /><span class="choiceTitle">D. 对封建王朝的打击空前沉重</span>
+                                            <br />
+                                    </div>
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">C</span> 
+                                        <span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;">未填写</span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:0:j_idt195:17:j_idt218" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:17:j_idt218&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:17:j_idt220" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:17:j_idt220&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:17:j_idt222" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:17:j_idt222&quot;,onco:function(xhr,status,args){PF('statisticDig1').show();;}});return false;">作答统计</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">19、1942年5月，毛泽东在（ ）上发表讲话，全面总结五四运动以来中国革命文艺运动的历史经验，深刻阐明和发展了马克思主义的文艺理论，为中国革命文艺的发展指明了正确方向。</span><span class="choiceTitle">（2.0分）</span>
+                                    <div style="margin-left: 30px;"><span class="choiceTitle">A. 遵义会议</span>
+                                            <br /><span class="choiceTitle">B. 中共七大</span>
+                                            <br /><span class="choiceTitle">C. 七届二中全会</span>
+                                            <br /><span class="choiceTitle">D. 延安文艺座谈会</span>
+                                            <br />
+                                    </div>
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">D</span> 
+                                        <span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;">未填写</span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:0:j_idt195:18:j_idt218" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:18:j_idt218&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（1）</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:18:j_idt220" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:18:j_idt220&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:18:j_idt222" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:18:j_idt222&quot;,onco:function(xhr,status,args){PF('statisticDig1').show();;}});return false;">作答统计</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">20、中国的资产阶级民主革命是由（）首先发动的。</span><span class="choiceTitle">（2.0分）</span>
+                                    <div style="margin-left: 30px;"><span class="choiceTitle">A. 维新派</span>
+                                            <br /><span class="choiceTitle">B. 保皇派</span>
+                                            <br /><span class="choiceTitle">C. 立宪派</span>
+                                            <br /><span class="choiceTitle">D. 革命派</span>
+                                            <br />
+                                    </div>
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">D</span> 
+                                        <span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;">未填写</span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:0:j_idt195:19:j_idt218" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:19:j_idt218&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:19:j_idt220" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:19:j_idt220&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        <a id="myForm:j_idt190:0:j_idt195:19:j_idt222" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:0:j_idt195:19:j_idt222&quot;,onco:function(xhr,status,args){PF('statisticDig1').show();;}});return false;">作答统计</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /></div></div><script id="myForm:j_idt190:0:j_idt191_s" type="text/javascript">PrimeFaces.cw("Panel","widget_myForm_j_idt190_0_j_idt191",{id:"myForm:j_idt190:0:j_idt191"});</script><div id="myForm:j_idt190:1:j_idt191" class="ui-panel ui-widget ui-widget-content ui-corner-all mainPanel frontColumn noBackground" data-widget="widget_myForm_j_idt190_1_j_idt191"><div id="myForm:j_idt190:1:j_idt191_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">※多选题，共10小题，共20.0分，实得0.0分。</span></div><div id="myForm:j_idt190:1:j_idt191_content" class="ui-panel-content ui-widget-content"><span class="choiceTitle">1、1905——1907年年进行的革命派与改良派的大论战，论战双方的主要阵地是：（）</span><span class="choiceTitle">（2.0分）</span>
+                                    <div style="margin-left: 30px;"><span class="choiceTitle">A. 《时务报》</span>
+                                            <br /><span class="choiceTitle">B. 《民报》</span>
+                                            <br /><span class="choiceTitle">C. 《苏报》</span>
+                                            <br /><span class="choiceTitle">D. 《新民丛报》　　　　　　　</span>
+                                            <br />
+                                    </div>
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">BD</span> 
+                                        <span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;"></span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:1:j_idt195:0:j_idt248" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:1:j_idt195:0:j_idt248&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:1:j_idt195:0:j_idt250" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:1:j_idt195:0:j_idt250&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">2、中共中央在1953年通过的《关于发展农业生产合作社的决议》中，提出了几种过渡型的经济组织形式包括：（）</span><span class="choiceTitle">（2.0分）</span>
+                                    <div style="margin-left: 30px;"><span class="choiceTitle">A. 互助组</span>
+                                            <br /><span class="choiceTitle">B. 初级农业生产合作社</span>
+                                            <br /><span class="choiceTitle">C. 人民公社</span>
+                                            <br /><span class="choiceTitle">D. 高级农业生产合作社</span>
+                                            <br /><span class="choiceTitle">E. 农业生产小组</span>
+                                            <br />
+                                    </div>
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">ABD</span> 
+                                        <span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;"></span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:1:j_idt195:1:j_idt248" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:1:j_idt195:1:j_idt248&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:1:j_idt195:1:j_idt250" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:1:j_idt195:1:j_idt250&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">3、19世纪70至90年代中国面临的危机是（ ）</span><span class="choiceTitle">（2.0分）</span>
+                                    <div style="margin-left: 30px;"><span class="choiceTitle">A. 清朝政府与人民矛盾白炽化</span>
+                                            <br /><span class="choiceTitle">B. 帝国主义扬言要迅速灭亡中国</span>
+                                            <br /><span class="choiceTitle">C. 边疆危机</span>
+                                            <br /><span class="choiceTitle">D. 瓜分危机</span>
+                                            <br />
+                                    </div>
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">ACD</span> 
+                                        <span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;"></span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:1:j_idt195:2:j_idt248" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:1:j_idt195:2:j_idt248&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:1:j_idt195:2:j_idt250" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:1:j_idt195:2:j_idt250&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">4、整风运动的主要内容是：（）</span><span class="choiceTitle">（2.0分）</span>
+                                    <div style="margin-left: 30px;"><span class="choiceTitle">A. 整顿学风</span>
+                                            <br /><span class="choiceTitle">B. 整顿党风</span>
+                                            <br /><span class="choiceTitle">C. 整顿文风</span>
+                                            <br /><span class="choiceTitle">D. 整顿浮夸风</span>
+                                            <br />
+                                    </div>
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">ABC</span> 
+                                        <span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;"></span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:1:j_idt195:3:j_idt248" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:1:j_idt195:3:j_idt248&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:1:j_idt195:3:j_idt250" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:1:j_idt195:3:j_idt250&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">5、在新民主主义革命时期，压在中国人民身上的“三座大山”是指：（）</span><span class="choiceTitle">（2.0分）</span>
+                                    <div style="margin-left: 30px;"><span class="choiceTitle">A. 外国帝国主义</span>
+                                            <br /><span class="choiceTitle">B. 本国封建主义</span>
+                                            <br /><span class="choiceTitle">C. 本国资本主义</span>
+                                            <br /><span class="choiceTitle">D. 官僚资本主义</span>
+                                            <br />
+                                    </div>
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">ABD</span> 
+                                        <span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;"></span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:1:j_idt195:4:j_idt248" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:1:j_idt195:4:j_idt248&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:1:j_idt195:4:j_idt250" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:1:j_idt195:4:j_idt250&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">6、农村包围城市、武装夺取政权道路的两个基本特点是（）</span><span class="choiceTitle">（2.0分）</span>
+                                    <div style="margin-left: 30px;"><span class="choiceTitle">A. 实行人民战争</span>
+                                            <br /><span class="choiceTitle">B. 主要斗争形势是长期的革命战争</span>
+                                            <br /><span class="choiceTitle">C. 进攻的主要方向是先去农村，后占城市</span>
+                                            <br /><span class="choiceTitle">D. 在战略上藐视敌人，战术上重视敌人</span>
+                                            <br /><span class="choiceTitle">E. 无产阶级同资产阶级建立统一战线</span>
+                                            <br />
+                                    </div>
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">BC</span> 
+                                        <span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;"></span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:1:j_idt195:5:j_idt248" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:1:j_idt195:5:j_idt248&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:1:j_idt195:5:j_idt250" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:1:j_idt195:5:j_idt250&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">7、在1921年中国共产党成立到1949年新中国成立以前的时期，中国存在的三种主要的政治力量是：（）</span><span class="choiceTitle">（2.0分）</span>
+                                    <div style="margin-left: 30px;"><span class="choiceTitle">A. 地主阶级和买办性的大资产阶级</span>
+                                            <br /><span class="choiceTitle">B. 民族资产阶级</span>
+                                            <br /><span class="choiceTitle">C. 城市小资产阶级和农村广大士绅</span>
+                                            <br /><span class="choiceTitle">D. 工人阶级、农民阶级和城市小资产阶级</span>
+                                            <br />
+                                    </div>
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">ABD</span> 
+                                        <span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;"></span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:1:j_idt195:6:j_idt248" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:1:j_idt195:6:j_idt248&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:1:j_idt195:6:j_idt250" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:1:j_idt195:6:j_idt250&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">8、中国的抗日战争是世界反法西斯战争的重要组成部分，其表现是（）</span><span class="choiceTitle">（2.0分）</span>
+                                    <div style="margin-left: 30px;"><span class="choiceTitle">A. 中国战场年平均牵制日本的陆军的74%以上</span>
+                                            <br /><span class="choiceTitle">B. 日军在海外作战中损失的287万人中，有150万人伤亡在中国战场</span>
+                                            <br /><span class="choiceTitle">C. 中国为盟国提供了大量的战略物资和军事情报</span>
+                                            <br /><span class="choiceTitle">D. 苏联出兵击败日本关东军</span>
+                                            <br /><span class="choiceTitle">E. 美英法等国向中国提供了经济援助或军事合作</span>
+                                            <br />
+                                    </div>
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">ABCDE</span> 
+                                        <span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;"></span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:1:j_idt195:7:j_idt248" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:1:j_idt195:7:j_idt248&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:1:j_idt195:7:j_idt250" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:1:j_idt195:7:j_idt250&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">9、下列关于林则徐、魏源等倡导新思想的代表人物的评述，正确的是（）</span><span class="choiceTitle">（2.0分）</span>
+                                    <div style="margin-left: 30px;"><span class="choiceTitle">A. 都是地主阶级开明知识分子</span>
+                                            <br /><span class="choiceTitle">B. 其思想都带有鲜明的时代特点</span>
+                                            <br /><span class="choiceTitle">C. 都主张放眼世界、探索救国之路　</span>
+                                            <br /><span class="choiceTitle">D. 都未能完全冲破封建思想的牢笼</span>
+                                            <br /><span class="choiceTitle">E. 都主张不仅学习西方的技术，还要效法政治制度</span>
+                                            <br />
+                                    </div>
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">ABCD</span> 
+                                        <span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;"></span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:1:j_idt195:8:j_idt248" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:1:j_idt195:8:j_idt248&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:1:j_idt195:8:j_idt250" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:1:j_idt195:8:j_idt250&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">10、奠定维新变法理论基础的康有为的著作有：（）</span><span class="choiceTitle">（2.0分）</span>
+                                    <div style="margin-left: 30px;"><span class="choiceTitle">A. 《新学伪经考》</span>
+                                            <br /><span class="choiceTitle">B. 《孔子改制考》</span>
+                                            <br /><span class="choiceTitle">C. 《日本变政考》</span>
+                                            <br /><span class="choiceTitle">D. 《俄彼得变政记》</span>
+                                            <br />
+                                    </div>
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">AB</span> 
+                                        <span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;"></span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:1:j_idt195:9:j_idt248" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:1:j_idt195:9:j_idt248&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:1:j_idt195:9:j_idt250" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:1:j_idt195:9:j_idt250&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /></div></div><script id="myForm:j_idt190:1:j_idt191_s" type="text/javascript">PrimeFaces.cw("Panel","widget_myForm_j_idt190_1_j_idt191",{id:"myForm:j_idt190:1:j_idt191"});</script><div id="myForm:j_idt190:2:j_idt191" class="ui-panel ui-widget ui-widget-content ui-corner-all mainPanel frontColumn noBackground" data-widget="widget_myForm_j_idt190_2_j_idt191"><div id="myForm:j_idt190:2:j_idt191_header" class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all"><span class="ui-panel-title">※判断题，共20小题，共40.0分，实得0.0分。</span></div><div id="myForm:j_idt190:2:j_idt191_content" class="ui-panel-content ui-widget-content"><span class="choiceTitle">1、1900年6月，八国联军发动侵华战争后，清政府经过激烈的争论，决定支持义和团的反帝斗争，并允许义和团进入北京，表明清政府反对八国联军的侵略，态度是坚决的。（）</span><span class="choiceTitle">（2.0分）</span>
+                                    <br />
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">false</span><span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;"></span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:2:j_idt195:0:j_idt299" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:0:j_idt299&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:2:j_idt195:0:j_idt301" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:0:j_idt301&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">2、新中国的成立，标志着民族独立、人民解放的历史任务的基本完成和实现国家繁荣、人民共同富裕的历史任务的开始。（ ）</span><span class="choiceTitle">（2.0分）</span>
+                                    <br />
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">true</span><span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;"></span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:2:j_idt195:1:j_idt299" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:1:j_idt299&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:2:j_idt195:1:j_idt301" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:1:j_idt301&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">3、国民革命失败后，中国革命进入低潮。（ ）</span><span class="choiceTitle">（2.0分）</span>
+                                    <br />
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">true</span><span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;"></span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:2:j_idt195:2:j_idt299" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:2:j_idt299&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:2:j_idt195:2:j_idt301" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:2:j_idt301&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">4、1851年1月，洪秀全率拜上帝教教众发动起义，建号太平天国，定都天京。（ ）</span><span class="choiceTitle">（2.0分）</span>
+                                    <br />
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">false</span><span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;"></span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:2:j_idt195:3:j_idt299" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:3:j_idt299&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（1）</a>
+                                          
+                                        <a id="myForm:j_idt190:2:j_idt195:3:j_idt301" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:3:j_idt301&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">5、1917年俄国的十月革命，推动了社会主义思想在中国的传播。（ ）</span><span class="choiceTitle">（2.0分）</span>
+                                    <br />
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">true</span><span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;"></span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:2:j_idt195:4:j_idt299" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:4:j_idt299&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:2:j_idt195:4:j_idt301" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:4:j_idt301&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">6、1956年召开全国人民代表大会，第一次会议，通过《中华人民共和国宪法》 （ ）</span><span class="choiceTitle">（2.0分）</span>
+                                    <br />
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">false</span><span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;"></span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:2:j_idt195:5:j_idt299" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:5:j_idt299&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（1）</a>
+                                          
+                                        <a id="myForm:j_idt190:2:j_idt195:5:j_idt301" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:5:j_idt301&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">7、重庆谈判期间，中国共产党领导人民军队取得自卫战争胜利的战役是邯郸战役。（ ）</span><span class="choiceTitle">（2.0分）</span>
+                                    <br />
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">false</span><span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;"></span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:2:j_idt195:6:j_idt299" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:6:j_idt299&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（1）</a>
+                                          
+                                        <a id="myForm:j_idt190:2:j_idt195:6:j_idt301" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:6:j_idt301&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">8、维新派变法维新的基本纲领具有进步意义。（ ）</span><span class="choiceTitle">（2.0分）</span>
+                                    <br />
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">true</span><span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;"></span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:2:j_idt195:7:j_idt299" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:7:j_idt299&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:2:j_idt195:7:j_idt301" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:7:j_idt301&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">9、解放思想就是要探求客观规律，使主观和客观相一致。（ ）</span><span class="choiceTitle">（2.0分）</span>
+                                    <br />
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">false</span><span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;"></span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:2:j_idt195:8:j_idt299" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:8:j_idt299&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:2:j_idt195:8:j_idt301" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:8:j_idt301&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">10、产生近代军阀割据混战的直接原因是由于袁世凯死了，失去了其总头目。（ ）</span><span class="choiceTitle">（2.0分）</span>
+                                    <br />
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">true</span><span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;"></span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:2:j_idt195:9:j_idt299" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:9:j_idt299&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:2:j_idt195:9:j_idt301" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:9:j_idt301&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">11、“落后就要挨打”，因此，近代中国人民的反侵略斗争是“不识时务”、“昧于大势”。（）</span><span class="choiceTitle">（2.0分）</span>
+                                    <br />
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">false</span><span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;"></span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:2:j_idt195:10:j_idt299" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:10:j_idt299&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:2:j_idt195:10:j_idt301" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:10:j_idt301&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">12、早期马克思主义思想运动重视对马克思主义基本理论的学习，注意从中国的实际出发，开始提出知识分子应当同劳动者相结合的思想。（ ）</span><span class="choiceTitle">（2.0分）</span>
+                                    <br />
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">true</span><span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;"></span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:2:j_idt195:11:j_idt299" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:11:j_idt299&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:2:j_idt195:11:j_idt301" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:11:j_idt301&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">13、抗日战争胜利后，国内的主要矛盾是工人阶级同资产阶级的矛盾。（ ）</span><span class="choiceTitle">（2.0分）</span>
+                                    <br />
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">false</span><span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;"></span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:2:j_idt195:12:j_idt299" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:12:j_idt299&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（1）</a>
+                                          
+                                        <a id="myForm:j_idt190:2:j_idt195:12:j_idt301" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:12:j_idt301&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">14、第一次国共合作的政治基础是孙中山的旧三民主义。（ ）</span><span class="choiceTitle">（2.0分）</span>
+                                    <br />
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">false</span><span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;"></span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:2:j_idt195:13:j_idt299" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:13:j_idt299&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:2:j_idt195:13:j_idt301" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:13:j_idt301&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">15、1952年底，国民经济得到全面恢复和发展。 （ ）</span><span class="choiceTitle">（2.0分）</span>
+                                    <br />
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">true</span><span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;"></span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:2:j_idt195:14:j_idt299" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:14:j_idt299&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:2:j_idt195:14:j_idt301" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:14:j_idt301&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">16、近代中国半殖民地半封建社会的主要矛盾是帝国主义跟中华民族之间的矛盾，封建主义跟人民大众之间的矛盾。（）</span><span class="choiceTitle">（2.0分）</span>
+                                    <br />
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">true</span><span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;"></span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:2:j_idt195:15:j_idt299" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:15:j_idt299&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:2:j_idt195:15:j_idt301" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:15:j_idt301&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">17、近代中国历史进程中,资本帝国主义势力没有操控中国的财政经济命脉。（）</span><span class="choiceTitle">（2.0分）</span>
+                                    <br />
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">false</span><span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;"></span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:2:j_idt195:16:j_idt299" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:16:j_idt299&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:2:j_idt195:16:j_idt301" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:16:j_idt301&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">18、中华人民共和国是工人阶级领导的以工农联盟为基础的人民民主专政国家。（ ）</span><span class="choiceTitle">（2.0分）</span>
+                                    <br />
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">true</span><span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;"></span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:2:j_idt195:17:j_idt299" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:17:j_idt299&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:2:j_idt195:17:j_idt301" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:17:j_idt301&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">19、中国革命的新道路是“农村包围城市，武装夺取政权”。（ ）</span><span class="choiceTitle">（2.0分）</span>
+                                    <br />
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">true</span><span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;"></span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:2:j_idt195:18:j_idt299" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:18:j_idt299&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:2:j_idt195:18:j_idt301" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:18:j_idt301&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /><span class="choiceTitle">20、护国运动开始时，黄兴回云南发动反袁战争。（ ）</span><span class="choiceTitle">（2.0分）</span>
+                                    <br />
+                                    <div style="margin-left: 30px;"><span class="answer">正确答案：</span><span style="color:green;font-weight: bold;">false</span><span class="answer">，考生填写：</span><span style="color:green;font-weight: bold;"></span>  
+                                        <span style="color:red;font-weight:bolder;font-size:25px;font-family:宋体;">×</span>
+                                        <br /><span class="answer">试题解析：</span><span style="color:green;">不显示</span>
+                                        <br /><a id="myForm:j_idt190:2:j_idt195:19:j_idt299" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:19:j_idt299&quot;,onco:function(xhr,status,args){PF('questionCommentDig1').show();;}});return false;">试题评论（0）</a>
+                                          
+                                        <a id="myForm:j_idt190:2:j_idt195:19:j_idt301" href="#" class="ui-commandlink ui-widget comment" onclick="PrimeFaces.ab({s:&quot;myForm:j_idt190:2:j_idt195:19:j_idt301&quot;,onco:function(xhr,status,args){PF('questionCommentDig2').show();;}});return false;">我要评论</a>
+                                          
+                                        
+
+                                    </div>
+                                <hr style="color:#e5e5e5;" /></div></div><script id="myForm:j_idt190:2:j_idt191_s" type="text/javascript">PrimeFaces.cw("Panel","widget_myForm_j_idt190_2_j_idt191",{id:"myForm:j_idt190:2:j_idt191"});</script></div></div></div><script id="myForm:mainPanel_s" type="text/javascript">PrimeFaces.cw("Panel","widget_myForm_mainPanel",{id:"myForm:mainPanel"});</script>
+
+                    <br />
+                </div>
+            </div>
+            <div id="mainBottomDiv" style="">
+                <div style="width:1000px;margin: 0 auto;border: 0px solid red;"><div id="myForm:j_idt489" class="ui-panel ui-widget ui-widget-content ui-corner-all" style="width:100%;margin:3px 0px 3px 0px!important;padding: 0px!important;border:0px solid #e5e5e5;background: transparent;" data-widget="widget_myForm_j_idt489"><div id="myForm:j_idt489_content" class="ui-panel-content ui-widget-content"><span class="headLine2" style="margin-left: 15px;">友情链接</span><hr id="myForm:j_idt491" class="ui-separator ui-state-default ui-corner-all" /><table style="margin-left: 10px;width: 100%;">
+<tbody>
+<tr>
+<td><a href="http://www.cenpar.com.cn" target="_blank" class="notice">优学教育科技</a></td>
+<td><a href="http://marx.njust.edu.cn/" target="_blank" class="notice">南京理工大学马克思主义学院</a></td>
+<td><a href="http://jwc.njust.edu.cn/" target="_blank" class="notice">南京理工大学教务处</a></td>
+<td><a href="http://www.njust.edu.cn/" target="_blank" class="notice">南京理工大学</a></td>
+</tr>
+</tbody>
+</table>
+</div></div><script id="myForm:j_idt489_s" type="text/javascript">PrimeFaces.cw("Panel","widget_myForm_j_idt489",{id:"myForm:j_idt489"});</script><div id="myForm:j_idt501" class="ui-panel ui-widget ui-widget-content ui-corner-all" style="width:100%;border:0px solid #e5e5e5;background: transparent;" data-widget="widget_myForm_j_idt501"><div id="myForm:j_idt501_content" class="ui-panel-content ui-widget-content">
+            <div>
+                <table align="center" style="text-align: center; width: 99%" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td align="center"><span class="normalFont">版权所有 &copy; 2012-2017 南京理工大学马克思主义学院  技术支持：优学教育科技</span>
+
+                            <br /><span class="normalFont">电话：025-84315976</span>
+                            <br />
+                            <span class="normalFont">
+                                本系统建议在正式考试时使用<a target="_blank" href="https://www.google.com/intl/zh-CN/chrome/browser/" class="notice">Chrome</a>或<a target="_blank" href="http://www.firefox.com.cn/" class="notice">FireFox</a>等高性能浏览器！  
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+            </div></div></div><script id="myForm:j_idt501_s" type="text/javascript">PrimeFaces.cw("Panel","widget_myForm_j_idt501",{id:"myForm:j_idt501"});</script><div id="myForm:ajaxStatusPanel" style="width:64px;height:64px;position:fixed;right:5px;bottom:5px;z-index: 100"><div id="myForm:ajaxStatusPanel_start" style="display:none"><img id="myForm:j_idt507" src="/resources/images/loading.gif?pfdrid_c=true" alt="" style="" /></div><div id="myForm:ajaxStatusPanel_complete" style="display:none"></div></div><script id="myForm:ajaxStatusPanel_s" type="text/javascript">$(function(){PrimeFaces.cw("AjaxStatus","ajaxStatusPanel",{id:"myForm:ajaxStatusPanel"});});</script>
+                </div>
+            </div><span id="myForm:j_idt510"></span><script id="myForm:j_idt510_s" type="text/javascript">$(function(){PrimeFaces.cw('Growl','widget_myForm_j_idt510',{id:'myForm:j_idt510',sticky:false,life:6000,escape:true,msgs:[]});});</script><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="3298569149105107150:5914549942940086249" autocomplete="off" />
+</form>
+            <script type="text/javascript" src="/resources/jquery.Sonline.2.0/js/jquery.Sonline.js"></script>
+            <script type="text/javascript">
+                var open1=false;
+                if (open1) {
+                    $(function() {
+                        $().Sonline({
+                            Position: "left", //left或right
+                            Top: 180, //顶部距离，默认200px
+                            Width: 151, //顶部距离，默认200px
+                            Style: 3, //图标的显示风格共6种风格，默认显示第一种：1
+                            Effect: true, //滚动或者固定两种方式，布尔值：true或false
+                            DefaultsOpen: false, //默认展开：true,默认收缩：false
+                            Tel: " ", //其它信息图片等
+                            Qqlist: "", //多个QQ用','隔开，QQ和客服名用'|'隔开
+                            Qunlist: " ",
+                            Wwlist: ""
+                        });
+                    });
+                }
+            </script>
+        <script type="text/javascript">
+            //蝙蝠在线考试系统，技术支持：成都无标度网络科技有限公司，网址：http://www.wbdwl.com。
+        </script></body>
+</html>
