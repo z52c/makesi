@@ -38,7 +38,7 @@ void db4Makesi::_create_tables()
     {
         qDebug() << "Table singleChoice created!";
     }
-    create_sql = "create table multipleChoice (id INTEGER PRIMARY KEY AUTOINCREMENT, title varchar(255), answerA varchar(255),answerB varchar(255),answerC varchar(255),answerD varchar(255),answer varchar(10))";
+    create_sql = "create table multipleChoice (id INTEGER PRIMARY KEY AUTOINCREMENT, title varchar(255), answerA varchar(255),answerB varchar(255),answerC varchar(255),answerD varchar(255),answerE varchar(255),answer varchar(10))";
     sql_query.prepare(create_sql);
     if(!sql_query.exec())
     {
@@ -75,10 +75,10 @@ bool db4Makesi::insertSingleChoice(QString inTitle, QString inAnswerA, QString i
     }
 }
 
-bool db4Makesi::insertMultipleChoice(QString inTitle, QString inAnswerA, QString inAnswerB, QString inAnswerC, QString inAnswerD, QString inAnswer)
+bool db4Makesi::insertMultipleChoice(QString inTitle, QString inAnswerA, QString inAnswerB, QString inAnswerC, QString inAnswerD, QString inAnswerE, QString inAnswer)
 {
     QSqlQuery sql_query;
-    QString insert_sql=QString("INSERT INTO multipleChoice VALUES(NULL,\'%1\',\'%2\',\'%3\',\'%4\',\'%5\',\'%6\')").arg(inTitle).arg(inAnswerA).arg(inAnswerB).arg(inAnswerC).arg(inAnswerD).arg(inAnswer);
+    QString insert_sql=QString("INSERT INTO multipleChoice VALUES(NULL,\'%1\',\'%2\',\'%3\',\'%4\',\'%5\',\'%6\',\'%7\')").arg(inTitle).arg(inAnswerA).arg(inAnswerB).arg(inAnswerC).arg(inAnswerD).arg(inAnswerE).arg(inAnswer);
     if(!sql_query.exec(insert_sql))
     {
         qDebug()<<insert_sql;
@@ -109,7 +109,7 @@ bool db4Makesi::insertTF(QString inTitle, QString inAnswer)
 bool db4Makesi::isExistInSingleChoice(QString inTitle)
 {
     QSqlQuery sql_query;
-    QString select_sql = QString("select * from singleChoice where title = \'%1\'").arg(inTitle);
+    QString select_sql = QString("SELECT * FROM singleChoice WHERE title = \'%1\'").arg(inTitle);
     if(!sql_query.exec(select_sql))
     {
         qDebug()<<sql_query.lastError();
@@ -117,10 +117,13 @@ bool db4Makesi::isExistInSingleChoice(QString inTitle)
     }
     else
     {
-        //qDebug()<<sql_query.numRowsAffected();
-        if(sql_query.numRowsAffected()>1)
+        int i=0;
+        while(sql_query.next())
         {
-            //qDebug()<<sql_query.value(0).toString();
+           i++;
+        }
+        if(i)
+        {
             return true;
         }else
         {
@@ -140,7 +143,12 @@ bool db4Makesi::isExistInMultipleChoice(QString inTitle)
     }
     else
     {
-        if(sql_query.numRowsAffected()>1)
+        int i=0;
+        while(sql_query.next())
+        {
+           i++;
+        }
+        if(i)
         {
             return true;
         }else
@@ -161,7 +169,12 @@ bool db4Makesi::isExistInTF(QString inTitle)
     }
     else
     {
-        if(sql_query.numRowsAffected()>1)
+        int i=0;
+        while(sql_query.next())
+        {
+           i++;
+        }
+        if(i)
         {
             return true;
         }else
@@ -169,4 +182,91 @@ bool db4Makesi::isExistInTF(QString inTitle)
             return false;
         }
     }
+}
+
+
+QStringList db4Makesi::search(QString inTitle)
+{
+    struct choiceResult tmp;
+    result.clear();
+    QSqlQuery sql_query;
+    QString select_sql = QString("select * from singleChoice where title like \'%%1%\'").arg(inTitle);
+    if(!sql_query.exec(select_sql))
+    {
+        qDebug()<<sql_query.lastError();
+        return result;
+    }
+    else
+    {
+        while(sql_query.next())
+        {
+            tmp.title=sql_query.value(1).toString();
+            tmp.answerA=sql_query.value(2).toString();
+            tmp.answerB=sql_query.value(3).toString();
+            tmp.answerC=sql_query.value(4).toString();
+            tmp.answerD=sql_query.value(5).toString();
+            tmp.answer=sql_query.value(6).toString();
+            result.append(tmp.title);
+            result.append(getRightAnswer(tmp));
+        }
+    }
+
+    select_sql = QString("select * from multipleChoice where title like \'%%1%\'").arg(inTitle);
+    if(!sql_query.exec(select_sql))
+    {
+        qDebug()<<sql_query.lastError();
+        return result;
+    }
+    else
+    {
+        if(sql_query.numRowsAffected()>1)
+        {
+            while(sql_query.next())
+            {
+                tmp.title=sql_query.value(1).toString();
+                tmp.answerA=sql_query.value(2).toString();
+                tmp.answerB=sql_query.value(3).toString();
+                tmp.answerC=sql_query.value(4).toString();
+                tmp.answerD=sql_query.value(5).toString();
+                tmp.answerE=sql_query.value(6).toString();
+                tmp.answer=sql_query.value(7).toString();
+                result.append(tmp.title);
+                result.append(getRightAnswer(tmp));
+            }
+        }
+    }
+
+    select_sql = QString("select * from tf where title like \'%%1%\'").arg(inTitle);
+    if(!sql_query.exec(select_sql))
+    {
+        qDebug()<<sql_query.lastError();
+        return result;
+    }
+    else
+    {
+        if(sql_query.numRowsAffected()>1)
+        {
+            while(sql_query.next())
+            {
+                result.append(sql_query.value(1).toString());
+                result.append(sql_query.value(2).toString());
+            }
+        }
+    }
+    return result;
+}
+
+QString db4Makesi::getRightAnswer(choiceResult inTmp)
+{
+    QString tmpRtn;
+    if(inTmp.answer.contains("A"))
+        tmpRtn=tmpRtn+inTmp.answerA;
+    else if(inTmp.answer.contains("B"))
+        tmpRtn=tmpRtn+inTmp.answerB;
+    else if(inTmp.answer.contains("C"))
+        tmpRtn=tmpRtn+inTmp.answerC;
+    else if(inTmp.answer.contains("D"))
+        tmpRtn=tmpRtn+inTmp.answerD;
+
+    return tmpRtn;
 }

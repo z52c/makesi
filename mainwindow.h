@@ -20,7 +20,7 @@ public:
 private slots:
     void on_pushButton_clicked(); //解析并存入数据库
 
-    void on_pushButton_2_clicked();//创建数据库
+    void on_pushButton_2_clicked();
 
 private:
     Ui::MainWindow *ui;

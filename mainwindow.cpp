@@ -19,7 +19,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_clicked()
 {
     QString fileName;
-    for(int i=0;i<224;i++)
+    for(int i=0;i<=202;i++)
     {
         fileName=QString("%1.html").arg(QString::number(i));
         qDebug()<<QString("处理文件%1").arg(fileName);
@@ -27,6 +27,7 @@ void MainWindow::on_pushButton_clicked()
     }
 
 }
+
 
 void MainWindow::on_pushButton_2_clicked()
 {

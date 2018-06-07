@@ -12,7 +12,7 @@ void shitijiexi::doJob(QString inFileName, db4Makesi *inDB)
     file=new QFile(fileName);
     if(!file->open(QIODevice::ReadOnly))
     {
-        qDebug()<<"打开失败";
+        qDebug()<<QString("%1打开失败").arg(fileName);
         return;
     }
     doBefore();
@@ -62,7 +62,7 @@ void shitijiexi::getSingleChoice()
     QString tmpAnswerB=getTitleOrChoice(file->readLine());
     QString tmpAnswerC=getTitleOrChoice(file->readLine());
     QString tmpAnswerD=getTitleOrChoice(file->readLine());
-    QString tmpAnswer=getAnswer();return;
+    QString tmpAnswer=getAnswer();
     if(!db->isExistInSingleChoice(tmpTitle))
     {
         db->insertSingleChoice(tmpTitle,tmpAnswerA,tmpAnswerB,tmpAnswerC,tmpAnswerD,tmpAnswer);
@@ -84,11 +84,16 @@ void shitijiexi::getMultipleChoice()
     QString tmpAnswerB=getTitleOrChoice(file->readLine());
     QString tmpAnswerC=getTitleOrChoice(file->readLine());
     QString tmpAnswerD=getTitleOrChoice(file->readLine());
+    QString tmpAnswerE="";
+    line=file->readLine();
+    if(line.contains("choiceTitle"))
+    {
+        tmpAnswerE=getTitleOrChoice(line);
+    }
     QString tmpAnswer=getAnswer();
-    return;
     if(!db->isExistInMultipleChoice(tmpTitle))
     {
-        db->insertMultipleChoice(tmpTitle,tmpAnswerA,tmpAnswerB,tmpAnswerC,tmpAnswerD,tmpAnswer);
+        db->insertMultipleChoice(tmpTitle,tmpAnswerA,tmpAnswerB,tmpAnswerC,tmpAnswerD,tmpAnswerE,tmpAnswer);
     }
 }
 
